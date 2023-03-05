@@ -417,7 +417,7 @@ class TransparentProxy:
         local: bool = True,
         forward: bool = True,
         proxy_port: int = 8080,
-        filter: str | None = "tcp.DstPort == 80 or tcp.DstPort == 443",
+        filter: str | None = "tcp.DstPort == 80 or tcp.DstPort == 443 or tcp.DstPort == 5000",
     ) -> None:
         self.proxy_port = proxy_port
         self.filter = (
